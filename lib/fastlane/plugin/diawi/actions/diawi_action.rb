@@ -83,7 +83,7 @@ module Fastlane
                 current_time = Time.now
 
                 while timeout_time > current_time  do
-                    response = RestClient.get STATUS_CHECK_URL, {params: {token: token, job: job}}
+                    response = RestClient.get STATUS_CHECK_URL, {params: {token: token, job: job, timeout: timeout}}
 
                     begin
                         response
